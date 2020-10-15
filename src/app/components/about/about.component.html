@@ -1,0 +1,13 @@
+<div>
+    <h1 class="text-center text-secondary mt-3">Welcome to our about page</h1>
+    <h3 class="text-center text-secondary mt-3">Please slect a date below</h3>
+    <mat-form-field appearance="fill" class="d-flex justify-content-center mt-3">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date">
+          <input matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+</div>
