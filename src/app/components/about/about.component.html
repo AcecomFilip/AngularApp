@@ -1,5 +1,6 @@
 <div>
-    <h1 class="text-center text-secondary mt-3">Welcome to our about page</h1>
+  <h1 class="text-center text-secondary mt-3">Welcome to our about page</h1>
+  <div>
     <h3 class="text-center text-secondary mt-3">Please slect a date below</h3>
     <mat-form-field appearance="fill" class="d-flex justify-content-center mt-3">
         <mat-label>Enter a date range</mat-label>
@@ -10,4 +11,12 @@
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-date-range-picker #picker></mat-date-range-picker>
     </mat-form-field>
+  </div>
+  <div class="d-flex text-center" fxLayout="column" fxShow.gt-sm>
+    <ul class="justify-content-center">
+      <h2>This does</h2>
+      <h2 class="mt">Not Show</h2>
+      <h2 class="mt">On mobile</h2>
+    </ul>
+  </div>
 </div>

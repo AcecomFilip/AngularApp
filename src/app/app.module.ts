@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { HomeComponent } from './components/home/home.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { DialogPopupComponent } from './components/dialog-popup/dialog-popup.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     HomeComponent,
     TodosComponent,
     TodoItemComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    DialogComponent,
+    DialogPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     NgbModule,
     MaterialModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<h1 mat-dialog-title><strong>{{action}}</strong></h1>
+<div mat-dialog-content>
+    <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
+        <input placeholder="{{action}} Todo" matInput [(ngModel)]="local_data.name" [formControl]="todo">
+        <mat-error *ngIf="todo.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <ng-template #elseTemplate>
+        Do you want to delete <b>{{local_data.name}}</b>?
+    </ng-template>
+</div>
+<div mat-dialog-actions>
+    <button class="btn btn-success mr-3" (click)="doAction()">{{action}}</button>
+    <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
