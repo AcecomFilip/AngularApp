@@ -20,6 +20,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { DialogPopupComponent } from './components/dialog-popup/dialog-popup.component';
+import { FilipsColorDirective } from './filips-color.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DialogPopupComponent } from './components/dialog-popup/dialog-popup.com
     TodoItemComponent,
     AddTodoComponent,
     DialogComponent,
-    DialogPopupComponent
+    DialogPopupComponent,
+    FilipsColorDirective
   ],
   imports: [
     BrowserModule,

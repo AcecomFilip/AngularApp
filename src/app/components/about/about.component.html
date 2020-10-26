@@ -12,11 +12,28 @@
         <mat-date-range-picker #picker></mat-date-range-picker>
     </mat-form-field>
   </div>
-  <div class="d-flex text-center" fxLayout="column" fxShow.gt-sm>
-    <ul class="justify-content-center">
+
+  <div class="text-center" fxLayout="column" fxHide fxShow.gt-sm>
+    <ul>
       <h2>This does</h2>
       <h2 class="mt">Not Show</h2>
       <h2 class="mt">On mobile</h2>
     </ul>
+  </div>
+
+  <div class="text-center">
+    <div appFilipsColor>
+      <p>This is a red background</p>
+    </div>
+  
+    <div>
+      <h4>Pick a highlight color</h4>
+      <div>
+        <input type="radio" name="colors" (click)="color='green'">Green
+        <input type="radio" name="colors" (click)="color='pink'">Pink
+        <input type="radio" name="colors" (click)="color='cyan'">Cyan
+      </div>
+      <p class="mt-2" [appFilipsColor]="color">Hover to see what color you picked</p>
+    </div>
   </div>
 </div>
